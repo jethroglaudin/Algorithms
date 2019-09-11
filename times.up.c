@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <limits.h>
 int main(void)
 {
     /*
@@ -20,25 +21,26 @@ int main(void)
    char temp2[1];
    bool condition = true;
 
-   
-   
    printf("What time is it currently: ");
    scanf("%d", temp);
    
    unsigned int current = *(int*)temp;
    
-   
-  
-  
-    
-
-   
-   printf("%d\n", current);
-
+   if(current <= 0 || current >= 13)
+   {
+       fprintf(stderr, "Invalid input\n");
+       exit(1);
+   }
 
    printf("How many hours have passed: ");
-   scanf("%s", temp2);
+   scanf("%c", temp2);
    int passed = atoi(temp2);
+
+//    if(passed <= INT_MIN || passed >= INT_MAX)
+//    {
+//        fprintf(stderr, "Value is too large\n");
+//        return 2;
+//    }
 
    int timeNow = (current + passed);
    printf("%d\n", timeNow);
