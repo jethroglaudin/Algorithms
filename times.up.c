@@ -10,23 +10,21 @@ int main(void)
     ex. The time is now x:00 and y days have passed
     constrainsts  
     starting hour 1 <= x <= 12 
-    time pased 1<= y<= int_max
+    time pased int_min<= y<= int_max
     example if x which is the staring point 3
     y the number we increment x the time by. time is now 8:00
     days would be 0
     */
    int temp;
    int temp2;
- 
-
    printf("What time is it currently: ");
    scanf("%d", &temp);
    
    unsigned int current = *(int*)&temp;
    
-   if(current <= 0 && current >= 13)
+   if(current <= 0 || current >= 13)
    {
-       printf("Invalid input\n");
+       fprintf(stderr, "Invalid input\n");
        return 1;
    }
 
@@ -34,9 +32,9 @@ int main(void)
    scanf("%d", &temp2);
    unsigned int passed = *(int*)&temp2;
 
-   if(passed <= INT_MIN && passed >= INT_MAX)
+   if(passed <= INT_MIN || passed >= INT_MAX)
    {
-       fprintf(stderr, "Invalid Interger\n");
+       fprintf(stderr, "Interger not within INT_MIN and INT_MAX\n");
        return 2;
    }
 
