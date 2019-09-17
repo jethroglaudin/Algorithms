@@ -38,7 +38,7 @@ if (userYear > currentYear){
     let monthlyDifference = Math.abs(((currentMonth - userMonth) / 12)) 
     let total = yearlyDifference + monthlyDifference;
     
-    console.log(`${total.toFixed(2)} years`)
+    console.log(`${total.toFixed(2)} year difference`)
 }
 
 
