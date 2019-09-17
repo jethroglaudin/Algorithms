@@ -45,17 +45,6 @@ int main(void)
         printf("%.2f year difference.\n", total);
     }
 
-    
-   
-
-
-
-
-    
-    
-    // int currentYear;
-    // printf()
-
     return 0;
 
 }
