@@ -8,7 +8,7 @@ int main(void)
 {
     /* Given a year and month determine the number of years (two decimal accuracy) between
     the given time and now */
-
+ 
     int temp1, currentMonth, currentYear, userYear, yearDifference, futureYearDifference;
     float temp2, userMonth, monthDifference, futureMonthDifference, total, futureTotal;
 
@@ -26,8 +26,9 @@ int main(void)
     printf("Enter Month xx format: \n");
     scanf("%f", &temp2);
 
-    userYear = temp1; 
-    userMonth = temp2;
+
+    userYear = *(int*)&temp1; 
+    userMonth = *(float*)&temp2;
 
     if (userYear > currentYear)
     {
