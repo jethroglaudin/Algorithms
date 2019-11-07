@@ -14,19 +14,18 @@ int main (void)
     if(yearInput % 4 == 0 || yearInput % 4000 == 0)
     {
         isLeapYear = true;
-        printf("%s\n", "true");
-        return isLeapYear;  
+        printf("%s\n", "true");      
     }
      else if (yearInput % 1000 == 0)
     {
         isLeapYear = false;
-        printf("%s\n", "false");
-        return isLeapYear;    
+        printf("%s\n", "false");         
     } else 
     {
         isLeapYear = false;
-        printf("%s\n", "false");
-        return isLeapYear;
+        printf("%s\n", "false");     
     }
+
+    return isLeapYear;
 
 }
