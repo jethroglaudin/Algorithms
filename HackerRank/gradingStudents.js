@@ -1,23 +1,18 @@
 function gradingStudents(grades) {
     // Write your code here
 
-    let temp;
+    let roundedValue;
     for (let i = 0; i < grades.length; i++) {
-        temp = grades[i];
-        while (temp % 5 !== 0) {
-            temp++;
-        }
         if (grades[i] >= 38) {
-            if (temp - grades[i] < 3) {
-                grades[i] = temp;
+            roundedValue = grades[i];
+            while (roundedValue % 5 !== 0) {
+                roundedValue++;
+            }
+            if (roundedValue - grades[i] < 3) {
+                grades[i] = roundedValue;
             }
         }
-        else {
-            grades[i] = grades[i];
-        }
     }
-
     console.log(grades)
     return grades;
-
 }
