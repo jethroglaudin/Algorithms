@@ -37,7 +37,7 @@ void countApplesAndOranges(int s, int t, int a, int b, int apples_count, int* ap
     printf("%i\n", appleAmount);
     printf("%i\n", orangeAmount);
 }
-// Code to problem above //
+// Code to problem above  Time 17:31//
 int main()
 {
     char** st = split_string(readline());
