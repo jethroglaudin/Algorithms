@@ -10,17 +10,17 @@ int main(void)
 
 int Func(int S, int B, int X)
 {
-    int kilos = 0;
+    int kilosRemaining = 0;
     int bigBars = B;
     int smallBars = S;
     int bigBarWeight = 5;
     int smallBarCount = 0;
     int goal = X;
 
-    kilos = goal % bigBarWeight;
-    if(smallBars % kilos == 0)
+    kilosRemaining = goal % bigBarWeight;
+    if(smallBars % kilosRemaining == 0)
     {
-        smallBarCount = kilos;
+        smallBarCount = kilosRemaining;
     }
     else 
     {
