@@ -30,17 +30,18 @@ function getMoneySpent(keyboards, drives, b) {
      * Write your code here.
      */
     let amount = b;
-    let total = 0;
+    let bool = undefined;
     let budgetCombos = [];
-    for(let i in keyboards){
-        for(let j in drives){
-            if(keyboards[i] + drives[j] <= amount){
-                budgetCombos.push(keyboards[i] + drives[i])
-
-            }
-        } 
+    for (let i in keyboards) {
+        for (let j in drives) {
+            let sum = keyboards[i] + drives[j];
+            if (sum <= amount) {
+                budgetCombos.push(sum)
+            } 
+        }
     }
-   
+    console.log(budgetCombos)
+    return budgetCombos.length > 0 ? Math.max(...budgetCombos) : - 1;
 }
 
 function main() {
