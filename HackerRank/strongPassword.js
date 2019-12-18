@@ -1,9 +1,7 @@
 // Complete the minimumNumber function below.
 function minimumNumber(n, password) {
     // Return the minimum number of characters to make the password strong
-    
     let passwordArr = password.split("");
-    console.log(passwordArr);
 
     function isUpper(value){
         if (value.charCodeAt(0) >= 65 && value.charCodeAt(0) <= 90){
