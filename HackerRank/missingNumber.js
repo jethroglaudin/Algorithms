@@ -1,19 +1,19 @@
 function missingNumbers(arr, brr) {
+  const numCounter = array =>
+    array.reduce((acc, curr) => {
+      acc[curr] ? acc[curr]++ : (acc[curr] = 1);
+      return acc;
+    }, {});
 
-    arr.sort();
-    brr.sort();
-    let objArr = {};
-    let objBrr = {};
-    let same = 0;
+  const arrObj = numCounter(arr);
+  const brrObj = numCounter(brr);
 
-    for (let i = 0; i < brr.length; i++) {  
-        objBrr[brr[i]] = (objBrr[brr[i]] === undefined) ? 1 : objBrr[brr[i]] +=1;  
-    }
-    for (let i = 0; i < arr.length; i++) {  
-        objArr[arr[i]] = (objArr[arr[i]] === undefined) ? 1 : objArr[arr[i]] +=1;  
-    }
-    console.log(objBrr)
-    console.log(objArr)
+  console.log(arrObj);
+  console.log(brrObj);
 
-    
+  let missingNums = Object.keys(brrObj).filter(
+    num => arrObj[num] !== brrObj[num]
+  );
+
+  return missingNums;
 }
