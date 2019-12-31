@@ -1,4 +1,4 @@
-function returningChar(string) {
+function recurringChar(string) {
   let hashTable = {}; // create hash table
   let ans = null;
 
@@ -18,6 +18,6 @@ function returningChar(string) {
   return ans;
 }
 
-returningChar("ABCA");
-returningChar("BCABA");
-returningChar("ABCDEFG");
+recurringChar("ABCA");
+recurringChar("BCABA");
+recurringChar("ABCDEFG");
