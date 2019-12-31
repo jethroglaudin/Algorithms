@@ -15,6 +15,7 @@ function returningChar(string) {
   }
   console.log(hashTable);
   console.log(ans);
+  return ans;
 }
 
 returningChar("ABCA");
