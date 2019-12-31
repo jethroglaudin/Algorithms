@@ -1,10 +1,5 @@
 function returningChar(string) {
    let hashTable = {}; // create hash table
-
-//    for (let i = 0; i < string.length; i++){
-//        if()
-//        hashTable[string[i]] = i;
-//    }
     let ans = null;
 
     for(let i in string){
