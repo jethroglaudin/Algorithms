@@ -10,8 +10,8 @@ function allSubSets(arr) {
   console.log(subset);
 
   function helper(arr, subset, index) {
-    if (index !== arr.length) {
-      console.log(subset);
+    if (index == arr.length) {
+      console.log(subset.filter(item => item !== null));
     } else {
       subset[index] = null;
       helper(arr, subset, index + 1);
