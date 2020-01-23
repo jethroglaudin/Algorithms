@@ -8,9 +8,9 @@ namespace String_Calculator
         public static void Main(string[] args)
 
         {
-            var calc = new calculate();
-            calc.Calculate("5 % 7");
-            Console.WriteLine(calc);
+            Calculate calc = new Calculate();
+            var result = calc.calculate("15 + 5");
+            Console.WriteLine(result);
         }
     }
 }

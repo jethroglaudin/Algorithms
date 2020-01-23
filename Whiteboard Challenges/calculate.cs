@@ -1,9 +1,9 @@
 ﻿using System;
 namespace String_Calculator
 {
-    public class calculate
+    public class Calculate
     {
-        public int Calculate(string ex)
+        public int calculate(string ex)
         {
 
             char[] seperate = { ' ' };
