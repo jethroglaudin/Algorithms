@@ -74,7 +74,6 @@ class Student : Person{
         {
             grade = 'T';
         }
-
        return grade;
     }
     /*	
