@@ -8,17 +8,29 @@ class Solution {
                 map.put(num, map.get(num) + 1);
             }
         }
-       
-        Iterator it = map.entrySet().iterator();
-        int ans = 0;
-        
-        while(it.hasNext()){
-            Map.Entry pair = (Map.Entry)it.next();
-            if((int)pair.getValue() == 1){
-                ans = (int)pair.getKey();
+
+        // refactored
+
+        for(int num : nums) {
+            if(map.get(num) == 1){
+                return num;
             }
         }
-        return ans;
+       
+        return 0;
+       
+        // Iterator it = map.entrySet().iterator();
+        // int ans = 0;
+        
+        // while(it.hasNext()){
+        //     Map.Entry pair = (Map.Entry)it.next();
+        //     if((int)pair.getValue() == 1){
+        //         ans = (int)pair.getKey();
+        //     }
+        // }
+        // return ans;
+
+
         
     }
 }
